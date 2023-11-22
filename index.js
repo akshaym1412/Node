@@ -2,6 +2,7 @@ import express, { json } from 'express';
 import dotenv from 'dotenv';
 import connection from './database/db.js';
 import route from './Routes/routes.js';
+import bodyParser from 'body-parser';
 import cors from 'cors';
 import defalutdata from './default.js';
 // import razorpay from "razorpay";
@@ -9,6 +10,7 @@ import path from 'path';
 
 dotenv.config();
 const app=express();
+app.use(bodyParser.json());
 // export const instance = new razorpay({
 //     key_id: process.env.KEY,
 //     key_secret: process.env.SECRET,
