@@ -25,4 +25,3 @@ app.listen(port,()=>{
     console.log(`Server is running at the port ${port}`);
     connection(Username,Password);
 })
-defalutdata();

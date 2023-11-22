@@ -35,7 +35,7 @@ const route=Router();
 //        res.json("User exist");
 // }})
 
-route.get("data/products",async(req,res)=>{
+route.get("/products",async(req,res)=>{
 const data=await productsSchema.find({})
 res.status(200).json(data)
 }
