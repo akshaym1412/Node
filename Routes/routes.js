@@ -36,8 +36,15 @@ const route=Router();
 // }})
 
 route.get("/products",async(req,res)=>{
-const data=await productsSchema.find({})
-res.status(200).json(data)
+ try{
+    const data=await productsSchema.find({})
+    res.status(200).json(data)
+}
+catch(err){
+   res.send(err); 
+}
+
+
 }
 )
 
